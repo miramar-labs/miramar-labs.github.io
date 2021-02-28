@@ -28,7 +28,7 @@ twitter_username: AaronCody66
 github_username:  miramar-labs
 
 # Build settings
-theme: jekyll-theme-slate
+theme: minima
 plugins:
   - jekyll-feed
 
