@@ -30,7 +30,7 @@ twitter_username: "@AaronCody66"
 github_username:  miramar-labs
 
 # Build settings
-theme: slate
+theme: jekyll-theme-slate
 plugins:
   - jekyll-feed
 
