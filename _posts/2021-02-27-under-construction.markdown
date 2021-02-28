@@ -6,7 +6,7 @@ categories: jekyll update
 ---
 In this age of COVID where everyone is working from home, what better way to spend your time than building your own dream 'Home Lab'?
 
-![The Nerd Cave](mlabs.jpg)
+![The Nerd Cave](/assets/images/mlabs.jpg)
 
 I just pushed some code out to my [Github repo](https://github.com/miramar-labs/terraform-k8s) that demonstrates how I have things set up here.. think 'Infrastructure as Code' ....
 
