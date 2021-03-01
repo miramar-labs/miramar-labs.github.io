@@ -11,7 +11,7 @@ had to be done to punch the GPU's through to the JupyterLAB pods ... but once yo
 environment that looks like this: 
 
 
-![JLab](/assets/images/jlab.jpg)
+![JLab](/assets/images/jlab.png)
 
 Details to follow soon:
 
