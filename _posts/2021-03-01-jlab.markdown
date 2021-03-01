@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "Using GPU-enabled JupyterLab on the home cluster"
+date:   2021-02-27 
+categories: jekyll update
+---
+My original plan for the home system started off pretty simple - I just wanted a machine with a GPU on it so that I could 
+teach myself ML/DL ... but of course things got out of hand quickly and I ended up with the three hypervisor/kubernetes system.
+I wanted to use JupyterLab as my ML development environment, but because now I was running on top of a hypervisor, some additional work 
+had to be done to punch the GPU's through to the JupyterLAB pods ... but once you figure all that out, you end up with an awesome 
+environment that looks like this: 
+
+
+![JLab](/assets/images/jlab.jpg)
+
+Details to follow soon:
+
+- creating GPU-enabled ESXi templates
+- JupyterLAB 'docker stacks' - and how to modify them for use with GPUs
+
+
