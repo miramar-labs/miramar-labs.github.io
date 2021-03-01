@@ -4,10 +4,14 @@ title:  "Using GPU-enabled JupyterLab on the K8s home cluster"
 date:   2021-02-27 
 categories: jekyll update
 ---
-My original plan for the home system started off pretty simple - I just wanted a machine with a GPU on it so that I could 
-teach myself ML/DL ... but of course things got out of hand quickly and I ended up with the three hypervisor/kubernetes system.
-I wanted to use JupyterLab as my ML development environment, but because now I was running on top of a hypervisor, some additional work 
-had to be done to punch the GPU's through to the JupyterLAB pods ... but once you figure all that out, you end up with an awesome 
+My original plan for the home system started off fairly simple - I just wanted a machine with a GPU on it so that I could 
+teach myself ML/DL - but as I got further into it, I realized I needed a more general-purpose development environment that was 
+capable of doing distributed processing and running real ML pipelines, so I ended up with the three hypervisor/kubernetes system running
+HA Kubernetes. It allows me to quickly 'proof-of-concept' all sorts of projects and keep up with the latest technologies. Currently, for 
+example, I'm diving into building out TFX/Kubeflow pipelines (blog post about that coming soon).
+
+Early on I decided to use JupyterLab as my ML development environment of choice, but because now I was running on top of a hypervisor, some 
+additional work had to be done to punch the GPU's through to the JupyterLAB pods ... but once you figure all that out, you end up with an awesome 
 environment that looks like this: 
 
 
