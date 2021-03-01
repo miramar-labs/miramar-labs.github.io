@@ -17,5 +17,7 @@ Details to follow soon:
 
 - creating GPU-enabled ESXi templates
 - JupyterLAB 'docker stacks' - and how to modify them for use with GPUs
+- details about docker stacks in general and how to modify jupyterLAB on k8s to support different environments:
 
+![JLab](/assets/images/jlablogin.png)
 
