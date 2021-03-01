@@ -8,7 +8,7 @@ My original plan for the home system started off fairly simple - I just wanted a
 teach myself ML/DL - but as I got further into it, I realized I needed a more general-purpose development environment that was 
 capable of doing distributed processing and running real ML pipelines, so I ended up with the three hypervisor/kubernetes system running
 HA Kubernetes. It allows me to quickly 'proof-of-concept' all sorts of projects and keep up with the latest technologies. Currently, for 
-example, I'm diving into building out TFX/Kubeflow pipelines (blog post about that coming soon).
+example, I'm building out some TFX/Kubeflow pipelines (blog post about that coming soon).
 
 Early on I decided to use JupyterLab as my ML development environment of choice, but because now I was running on top of a hypervisor, some 
 additional work had to be done to punch the GPU's through to the JupyterLAB pods ... but once you figure all that out, you end up with an awesome 
@@ -23,6 +23,8 @@ Details to follow soon:
 - JupyterLAB 'docker stacks' - and how to modify them for use with GPUs
 - details about docker stacks in general and how to modify jupyterLAB on k8s to support different environments:
 - code repo [here](https://github.com/miramar-labs/jupyterlab-gpu)
+
+Multi-environment JupyterLAB:
 
 ![JLab](/assets/images/jlablogin.png)
 
