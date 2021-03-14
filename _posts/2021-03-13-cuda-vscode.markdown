@@ -14,6 +14,7 @@ Note: This post assumes a few things:
 - the machine has the latest [NVIDIA Driver](https://www.nvidia.com/en-us/drivers/unix/) installed
 - the machine has the [NVIDIA CUDA Toolkit](https://docs.nvidia.com/cuda/index.html) installed
 
+I also grabbed the [CUDA Examples](https://github.com/NVIDIA/cuda-samples) source code and made a VSCode workspace at the top-level folder.
 
 Ok so back to VSCode - eventually I got it working by adding a few custom json settings files to my workspace:
 
@@ -100,7 +101,7 @@ __Another WIN for VSCode !__
 
 ##### TROUBLESHOOTING
 
-On my Ubuntu 20.04 box, I had libncurses6 packages installed by default. I also use CUDA 11.0 (as that works well with Tensorflow). 
+On my Ubuntu 20.04 box, I had libncurses6 packages installed by default. I also use CUDA 11.0 (as that currently works well with Tensorflow). 
 However, initially I wasn't able to get `cuda-gdb` to run because of it's dependencies:
 	
 	aaron@blade:~$ ldd `which cuda-gdb`
