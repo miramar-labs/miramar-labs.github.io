@@ -8,7 +8,5 @@ In this age of COVID where everyone is working from home, what better way to spe
 
 ![The Nerd Cave](/assets/images/mlabs.jpg)
 
-I just pushed some code out to my [Github repo](https://github.com/miramar-labs/terraform-k8s) that demonstrates how I have things set up here.. think 'Infrastructure as Code' ....
-
-Details to follow soon...
+See my [Github repo](https://github.com/miramar-labs/terraform-k8s) for details... !
 
