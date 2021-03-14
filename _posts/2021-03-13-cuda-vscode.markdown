@@ -92,8 +92,9 @@ launch.json:
 }
 ```
 
-what this does is first build the code by calling the build task in `preLaunchTask` and then runs that in `cuda-gdb` ...
-The result is the ability to set breakpoints, not only in the CPU code but also in the Kernel code :
+What this does is first, build the code by calling the CUDA build task in `preLaunchTask` and then invoking `cuda-gdb` on 
+the resulting binary .. because we specified -g (host debug symbols) *and* -G (device debug symbols), breakpoints are
+now hit not only in the CPU (host) code, but also in the CUDA Kernel (device) code ....
 
 ![CUDA Debugging](/assets/images/cuda-dbg.png)
 
