@@ -87,6 +87,6 @@ launch.json:
 what this does is first build the code by calling the build task in `preLaunchTask` and then runs that in `cuda-gdb` ...
 The result is the ability to set breakpoints, not only in the CPU code but also in the Kernel code :
 
-![CUDA Debugging!](/assets/images/cuda-dbg.png)
+![CUDA Debugging](/assets/images/cuda-dbg.png)
 
 Another WIN for VSCode !  
