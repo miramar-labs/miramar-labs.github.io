@@ -58,8 +58,7 @@ tasks.json:
 }
 ```
 
-This allows me to quickly build the active .cu file. Note the addition of the -G flag, which generates the right symbols 
-for stepping into the actual CUDA kernel code in the debugger.
+This allows me to quickly build the active .cu file (Note the addition of the -G flag)
 
 For debugging, CUDA has it's own modified version of gdb (cuda-gdb), so now we need a launcher:
 
