@@ -8,7 +8,14 @@ Recently I have been migrating away from JetBrains IDEs in favor of VSCode .. be
 multi-language support ... (with JetBrains it seems you almost need a different IDE for every language these days).
 With VSCode I can create projects with C/C++/Java/Scala/Python/Go/BASH code all in one shot - it's great!
 This weekend I wanted to mess around with CUDA, so I looked into how to go about setting up that toolchain in VSCode.
-Eventually I got it working by adding a few custom json settings files to my workspace:
+
+Note: This post assumes a few things:
+- you are running this on a machine that has an NVIDIA GPU
+- the machine has the latest [NVIDIA Driver](https://www.nvidia.com/en-us/drivers/unix/) installed
+- the machine has the [NVIDIA CUDA Toolkit](https://docs.nvidia.com/cuda/index.html) installed
+
+
+Ok so back to VSCode - eventually I got it working by adding a few custom json settings files to my workspace:
 
 First of all, CUDA source code files have .cu and .cuh extensions... the syntax is basically C++ but with some minor 
 additions, so to get syntax highlighting working on those file types I added the following to my settings.json:
