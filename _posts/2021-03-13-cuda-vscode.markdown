@@ -28,7 +28,7 @@ __CTRL+SHIFT+P: Preferences: Open Settings (JSON)__
         "*.cuh":"cpp"  
     }
 
-Next I had to tell VSCode how to build these files - CUDA comes with hit's own modified version of gcc, called nvcc, so
+Next I had to tell VSCode how to build these files - CUDA comes with it's own modified version of gcc, called nvcc, so
 what you do is create a build task:
 
 tasks.json:
