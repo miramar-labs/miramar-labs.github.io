@@ -97,3 +97,23 @@ The result is the ability to set breakpoints, not only in the CPU code but also 
 ![CUDA Debugging](/assets/images/cuda-dbg.png)
 
 Another WIN for VSCode !  
+
+### TROUBLESHOOTING
+
+On my Ubuntu 20.04 box, I had libncurses6 packages installed by default. I also use CUDA 11.0 (as that works well with Tensorflow). 
+However, initially I wasn't able to get `cuda-gdb` to run because of it's dependencies:
+	
+	aaron@blade:~$ ldd `which cuda-gdb`
+	
+	linux-vdso.so.1 (0x00007ffc16f4e000)
+	libtinfo.so.5 => /lib/x86_64-linux-gnu/libtinfo.so.5 (0x00007f36fe8fe000)
+	libncursesw.so.5 => /lib/x86_64-linux-gnu/libncursesw.so.5 (0x00007f36fe8cc000)
+	libdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007f36fe8c6000)
+	libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007f36fe777000)
+	libpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007f36fe754000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f36fe562000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f36fe947000)
+
+as you can see it depends on libncurses5, so you may need to install that too, for example:
+
+	sudo apt-get --reinstall install libncurses5 libncursesw5
