@@ -44,6 +44,11 @@ tasks.json:
             "args": [
                 "-g",
                 "-G",
+                "-ccbin",
+                "g++",
+                "-m64",
+                "-gencode",
+                "arch=compute_75,code=sm_75",
                 "${file}",
                 "-I${workspaceFolder}/Common",
                 "-o",
@@ -58,7 +63,7 @@ tasks.json:
 }
 ```
 
-This allows me to quickly build the active .cu file (Note the addition of the -G flag)
+This allows me to quickly build the active .cu file, targeting my Turing compute 7.5 GPU (also note the addition of the -G flag)
 
 For debugging, CUDA has it's own modified version of gdb (cuda-gdb), so now we need a launcher:
 
