@@ -19,7 +19,7 @@ I also grabbed the [CUDA Examples](https://github.com/NVIDIA/cuda-samples) sourc
 Ok so back to VSCode - eventually I got it working by adding a few custom json settings files to my workspace:
 
 First of all, CUDA source code files have .cu and .cuh extensions... the syntax is basically C++ but with some minor 
-additions (such as the <<< >>> brackets that mark device code blocks), so to get syntax highlighting 'mostly working' on those file types I added the following to my settings.json:
+additions (such as the triple < .. >  brackets that mark device code blocks), so to get syntax highlighting 'mostly working' on those file types I added the following to my settings.json:
 
  
 __CTRL+SHIFT+P: Preferences: Open Settings (JSON)__
