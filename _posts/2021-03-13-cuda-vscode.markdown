@@ -6,7 +6,7 @@ categories: jekyll update
 ---
 Recently I have been migrating away from JetBrains IDEs in favor of VSCode .. because of it's excellent 
 multi-language support ... (with JetBrains it seems you almost need a different IDE for every language these days).
-With VSCode I can create projects with C/C++/Java/Scala/Python/Go/BASH code all in one shot - it's great!
+With VSCode I can create projects with C/C++/Java/Scala/Python/Go/BASH/whatever code all in one shot - it's great!
 This weekend I wanted to mess around with CUDA, so I looked into how to go about setting up that toolchain in VSCode.
 
 Note: This post assumes a few things:
