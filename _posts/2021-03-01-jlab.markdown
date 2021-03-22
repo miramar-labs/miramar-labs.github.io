@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Using GPU-enabled JupyterLab on the K8s home cluster"
-date:   2021-02-27 
+date:   2021-03-01 
 categories: jekyll update
 ---
 My original plan for the home system started off fairly simple - I just wanted a machine with a GPU on it so that I could 
