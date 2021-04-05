@@ -36,10 +36,11 @@ tasks.json:
 
 ```json
 {
+    "version": "2.0.0",
     "tasks": [
         {
             "type": "shell",
-            "label": "CUDA C/C++: build active file",
+            "label": "CUDA C/C++: BUILD active file",
             "command": "nvcc",
             "args": [
                 "-g",
@@ -56,14 +57,41 @@ tasks.json:
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
             }
+        },
+        {
+            "label": "CUDA C/C++: RUN active file",
+            "type": "shell",
+            "command": "${fileDirname}/${fileBasenameNoExtension}",
+            "dependsOn": [
+                "CUDA C/C++: BUILD active file"
+            ],
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "CUDA C/C++: PROFILE active file",
+            "type": "shell",
+            "command": "/usr/local/cuda/bin/nvvp ${fileDirname}/${fileBasenameNoExtension}",
+            "dependsOn": [
+                "CUDA C/C++: BUILD active file"
+            ],
+            "problemMatcher": ["$gcc"]
         }
-    ],
-    "version": "2.0.0"
+    ]
 }
 ```
 
 This allows me to quickly build the active .cu file, targeting my Turing compute 7.5 GPU (also note the addition of the -G flag)
+
+I also added two additional tasks, one to build then RUN the active file and another to build then PROFILE the active file 
+(using the NVidia visual profiler)
+
+Any of the tasks defined above can be run by going to the `Terminal` menu and selecting `Run Task`
 
 For debugging, CUDA has it's own modified version of gdb (cuda-gdb), so now we need a launcher:
 
@@ -89,7 +117,7 @@ launch.json:
                 "ignoreFailures": true
               }
             ],
-            "preLaunchTask": "CUDA C/C++: build active file",
+            "preLaunchTask": "CUDA C/C++: BUILD active file",
             "miDebuggerPath": "/usr/local/cuda/bin/cuda-gdb"
           }
     ]
