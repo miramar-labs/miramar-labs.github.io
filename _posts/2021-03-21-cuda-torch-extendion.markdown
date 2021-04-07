@@ -16,7 +16,7 @@ Consider the task of adding two very large vectors, in CPU land you might do thi
 ```python
 import random
 
-# first initialize teo large arrays of floats with random values
+# first initialize two large arrays of floats with random values
 a = []
 b = []
 for i in range(0, 10000):
