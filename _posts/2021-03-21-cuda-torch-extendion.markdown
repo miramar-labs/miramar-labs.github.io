@@ -8,8 +8,8 @@ categories: jekyll update
 This is a short post about how to invoke a custom C++ CUDA Kernel from Python/Torch.
 
 A CUDA kernel is a C++ function that runs on an NVidia GPU. 
-GPU architecture differs from CPU architecture in that you have vastly more threads to play with 
-(and hence far greater parallelism) 
+GPU architecture differs from CPU architecture in that you have vastly more (hardware) threads to play with 
+(and hence opportunities for far greater parallelism) 
 
 Consider the task of adding two very large vectors, in CPU land you might do this in a for loop:
 
