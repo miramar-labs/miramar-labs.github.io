@@ -76,7 +76,7 @@ tasks.json:
         {
             "label": "CUDA C/C++: PROFILE active file",
             "type": "shell",
-            "command": "/usr/local/cuda/bin/nvvp ${fileDirname}/${fileBasenameNoExtension}",
+            "command": "/usr/local/cuda/bin/nvprof ${fileDirname}/${fileBasenameNoExtension}",
             "dependsOn": [
                 "CUDA C/C++: BUILD active file"
             ],
@@ -89,7 +89,7 @@ tasks.json:
 This allows me to quickly build the active .cu file, targeting my Turing compute 7.5 GPU (also note the addition of the -G flag)
 
 I also added two additional tasks, one to build then RUN the active file and another to build then PROFILE the active file 
-(using the NVidia visual profiler)
+(using the NVidia `nvprof` profiler)
 
 Any of the tasks defined above can be run by going to the `Terminal` menu and selecting `Run Task`
 
