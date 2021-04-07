@@ -135,7 +135,7 @@ PYBIND11_MODULE(TORCH_EXTENSION_NAME, m){
 }
 ```
 Also note that we also use the PyTorch [ATen](https://pytorch.org/cppdocs/) library here to represent the input/output vectors as tensor<T>'s
-(ATen) for simplicity .. as this library encapsulates all the tedious host/device memory allocation/copying that needs to happen 
+for simplicity .. as this library encapsulates all the tedious host/device memory allocation/copying that needs to happen..
 
 Finally you need to compile the CUDA code and bind it to an actual Python module:
 ```python
