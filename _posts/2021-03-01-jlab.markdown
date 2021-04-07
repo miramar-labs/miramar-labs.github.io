@@ -6,7 +6,7 @@ categories: jekyll update
 ---
 My original plan for the home system started off fairly simple - I just wanted a machine with a GPU on it so that I could 
 teach myself ML/DL - but as I got further into it, I realized I needed a more general-purpose development environment that was 
-capable of doing distributed processing and running real ML pipelines, so I ended up with the three hypervisor/kubernetes system running
+capable of doing distributed processing and running real ML pipelines, so I ended up with the three hypervisor/ESXi system running
 HA Kubernetes. It allows me to quickly 'proof-of-concept' all sorts of projects and keep up with the latest technologies. Currently, for 
 example, I'm building out some TFX/Kubeflow pipelines (blog post about that coming soon).
 
