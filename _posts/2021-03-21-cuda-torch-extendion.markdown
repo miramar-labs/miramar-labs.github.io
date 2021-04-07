@@ -91,7 +91,7 @@ void AddGPUKernel(T *in_a, T *in_b, T *out_c, int N, cudaStream_t stream) {
 So here you can see that when we invoke the kernel, we specify the number of blocks/threads to use. Obviously you should
 check your GPU device properties to see how many threads you can have in a block and so on...
 
-Anyway, so now that we have converted our vector adder into a c++ CUDA kernel, how can we invoke that from a Python/Torch 
+Anyway, so now that we have converted our vector adder into a C++ CUDA kernel, how can we invoke that from a Python/Torch 
 program? The answer is to use the [PyBind](https://github.com/pybind/pybind11) library to wrap the kernel in some boilerplate:
 
 ```c++
@@ -134,8 +134,8 @@ PYBIND11_MODULE(TORCH_EXTENSION_NAME, m){
   m.def("AddGPU", &AddGPU<float>);
 }
 ```
-Also note that we also use the PyTorch [ATen](https://pytorch.org/cppdocs/) library here to represent the input/output vectors as tensor<T>'s
-for simplicity .. as this library encapsulates all the tedious host/device memory allocation/copying that needs to happen..
+Also note the of use PyTorch [ATen](https://pytorch.org/cppdocs/) library here to represent the input/output vectors as tensor<T>'s
+for simplicity .. as this library encapsulates all the tedious host<-->device memory allocation/copying that needs to happen..
 
 Finally you need to compile the CUDA code and bind it to an actual Python module:
 ```python
