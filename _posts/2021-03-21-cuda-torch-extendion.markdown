@@ -134,8 +134,8 @@ PYBIND11_MODULE(TORCH_EXTENSION_NAME, m){
   m.def("AddGPU", &AddGPU<float>);
 }
 ```
-Also note the of use PyTorch [ATen](https://pytorch.org/cppdocs/) library here to represent the input/output vectors as tensor<T>'s
-for simplicity .. as this library encapsulates all the tedious host<-->device memory allocation/copying that needs to happen..
+Also note the use of PyTorch's [ATen](https://pytorch.org/cppdocs/) library here to represent the input/output vectors as tensor<T>'s
+for simplicity .. as this library encapsulates the tedious host<-->device memory allocation/copying that needs to happen..
 
 Finally you need to compile the CUDA code and bind it to an actual Python module:
 ```python
