@@ -187,6 +187,8 @@ if torch.cuda.is_available():
     print(a, b, c)
 ```
 
-That concludes this example .... code repo [here](https://github.com/miramar-labs/cuda-torch-custom-kernel)
+That's it!
+
+Code repo [here](https://github.com/miramar-labs/cuda-torch-custom-kernel)
 
 
