@@ -44,7 +44,7 @@ parallelism achieved.
 But GPUs *do* have that many threads! So what we can do is take advantage of them by running a kernel function that does 
 the addition on the GPU:
 
-Here is our vector addition function written as a C++ template function in CUDA: 
+Here is the vector addition function written as a C++ template function in CUDA: 
 ```c++
 template <typename T>
 __global__ void sum(T *a, T *b, T *c, int N) {
