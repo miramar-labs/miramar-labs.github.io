@@ -34,7 +34,7 @@ The runtime efficiency for this addition is O(N) .. works great for small N ...
 But for VERY large arrays, you would naturally start to think about ways to optimize it.
 Using NumPy might be a first good option as that is a highly optimized library for doing this sort of thing. Another 
 option might be to utilize threads on your CPU ... let's say you have a machine with 4 cores, so you have the possibility
-of 4 threads running in parallel right there... so why not partition the input arrays into four partitions and process
+of at most, 4 threads running in parallel right there... so why not partition the input arrays into four partitions and process
 those in parallel on separate threads? That would surely give you a boost...
 Taking that idea further, wouldn't it be great if the CPU had 10000 threads .. so that you could do each float addition
 in parallel on it's own thread! Well typically CPU's don't have that many threads available .. and beyond the number of cores
