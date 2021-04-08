@@ -30,7 +30,8 @@ for i in range(0, 10000):
 
 ```
 
-For very large arrays, this might become rather slow, so you would naturally start to think about ways to optimize it.
+The runtime efficiency for this addition is O(N) .. works great for small N ...
+But for VERY large arrays, you would naturally start to think about ways to optimize it.
 Using NumPy might be a first good option as that is a highly optimized library for doing this sort of thing. Another 
 option might be to utilize threads on your CPU ... let's say you have a machine with 4 cores, so you have the possibility
 of 4 threads running in parallel right there... so why not partition the input arrays into four partitions and process
